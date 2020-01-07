@@ -1,0 +1,11 @@
+COMENTÁRIOS
+
+Onde e qual versão vejo e escrevo?
+
+meto "ema guedes" ou "<ema guedes>"?
+
+USO MAIS CORRECTO
+
+meto sempre <!DOCTYPE HTML>  e <html lang="pt">?
+
+tenho de usar o ponto(.) entre o texto e as variaves?
