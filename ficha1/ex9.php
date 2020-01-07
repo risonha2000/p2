@@ -22,7 +22,6 @@
     <body>
         <?php
            prinft("%.2f" , 4,78905);
-           echo 
            prinft("%.2f" , 47.7);
            prinft("%.2f" , 5,8954);
            prinft("%.2f" , 5);
