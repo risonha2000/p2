@@ -20,36 +20,24 @@
     <body>
         <form name="ex5" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?> ">
                 <label for="num">Insira um número:</label>
-                <input type="number" name="num1">
+                <input type="number" name="num">
                 <br><br>
-                <label for="num">Insira um número:</label>
-                <input type="number" name="num2">
-                <br><br>
-                <input type="submit" value="Multiplicação de todos os números naturais entre os números inseridos">
+                <input type="submit" value="Tabuada do número inserido">
                 <br><br>
         </form>
         <?php
-            if (isset($_REQUEST["num1"], $_REQUEST["num2"])) {
-                $_num1 = $_REQUEST["num1"];
-                $_num2 = $_REQUEST["num2"];
+            if (isset($_REQUEST["num"])) {
+                $_num1 = $_REQUEST["num"];
             
-                $num1 = $_GET["num1"];
-                $num2 = $_GET["num2"];
-                $total = 0;
+                $num1 = $_GET["num"];
 
-                echo "Primeiro número inserido: $num1 <br>";
-                echo "Segundo número inserido: $num2";
-                
-                if ($num1<$num2) {
-                    while ($num1<$num2) {
-                        $total = ($num1 * ($num1+1));
-                        echo "<p>".$num1."x".($num1+1)." = <strong>".$total."</strong></p>";
-                        $num1++;
+                function tab($num)
+                {
+                    for ($i=1; $i < 11; $i++) {
+                            echo "<br>$num * $i = ".$i*$num;
                     }
                 }
-                else {
-                    echo "<br><br>O primeiro número inserido tem de ser menor que o segundo.";
-                }
+                tab($_GET["num"]);
             }
         ?>
     </body>
