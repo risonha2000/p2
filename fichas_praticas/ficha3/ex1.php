@@ -57,7 +57,7 @@
                     case "12": echo "<br>Dezembro";
                         break; 
                     default: echo "<br>O número que inseriu não corresponde a nenhum mês. Tente novamente com um número <strong>inteiro entre 1 e 12</strong>.";  
-                }
+                } 
             }
         ?>
     </body>
