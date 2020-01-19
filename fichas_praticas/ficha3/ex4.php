@@ -19,28 +19,28 @@
         <title>Ficha 3, Exercício 4</title>
     </head>
     <body>
-        <h2>Números de 0 até o número que inseriu.</h2> 
-        <form name="ex5" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?> ">
-            <label for="num">Insira um valor <strong>inteiro positivo</strong>:</label>
-			<input type="number" name="num">
-			<br><br>
-			<input type="submit" value="Resultado">
-			<br><br>
+    <form name="ex4" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?> ">
+                <label for="num">Insira um número:</label>
+                <input type="number" name="num">
+                <br>
+                <input type="submit" value="Todos os números inteiros desde 0 até ao valor inserido">
         </form>
-
         <?php
             if (isset($_REQUEST["num"])) {
-                $num = $_REQUEST["num"];
+                $_num1 = $_REQUEST["num"];
 
-				if ($num<0) {
-					echo "Insira um valor <strong>inteiro positivo</strong>.";
-				} else {
-                    function num($i, $num)
-					$i=0; $i <= $num ; $i++ 
-					return $i;
-					}
-				}
+                function imprimeNumeros($par)
+                {
+                    for ($i = 0; $i <= $par; $i++) {
+                        if ($i < $par)
+                            echo "$i, ";
+                        else {
+                            echo "$i";
+                        }
+                    }
+                }
+                imprimeNumeros($_GET["num"]);
             }
-        ?>
+        ?>    
     </body>
 </html>
